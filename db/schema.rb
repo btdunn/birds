@@ -10,18 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_15_194908) do
-
-  create_table "add_column_to_birds", force: :cascade do |t|
-    t.integer "tree_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_07_15_202507) do
 
   create_table "birds", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "tree_id"
+    t.index ["tree_id"], name: "index_birds_on_tree_id"
   end
 
   create_table "trees", force: :cascade do |t|

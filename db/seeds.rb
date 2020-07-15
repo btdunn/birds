@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Bird.destroy_all
 
-Bird.create([{name: 'Rio'}, {name: 'Tuki'}, {name: 'Goen'}, {name: 'Polly'}])
+Tree.destroy_all
 
-Tree.create
+
+tree1 = Tree.create
+
+Bird.create([{name: 'Rio', tree: tree1}, {name: 'Tuki', tree: tree1}, {name: 'Goen', tree: tree1}, {name: 'Polly', tree: tree1}])

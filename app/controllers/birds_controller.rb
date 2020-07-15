@@ -10,7 +10,7 @@ class BirdsController < ApplicationController
   end
 
   def create
-  @bird = Bird.create(name: 'new')
+  @bird = Bird.create(name: params[:name], tree_id: params[:tree_id])
   render json: @bird
   end
 
